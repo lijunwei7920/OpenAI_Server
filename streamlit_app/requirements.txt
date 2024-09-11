@@ -1,0 +1,6 @@
+streamlit==1.4.0
+requests==2.26.0
+altair==4.1.0
+click==8.0.4
+
+#protobuf==3.20.x  # 降级 protobuf 版本

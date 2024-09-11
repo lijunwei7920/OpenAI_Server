@@ -1,0 +1,17 @@
+version: '3'
+services:
+  flask_app:
+    build:
+      context: ./flask_app
+      dockerfile: Dockerfile.flask
+    ports:
+      - "5000"  # 仅对容器内部暴露
+
+  streamlit_app:
+    build:
+      context: ./streamlit_app
+      dockerfile: Dockerfile.streamlit
+    ports:
+      - "8501:8501"
+    depends_on:
+      - flask_app
